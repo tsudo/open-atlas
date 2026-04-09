@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Skills — Orientation
-doc_type: doc
-status: reviewed
-created: 2026-04-08
-updated: 2026-04-08
-owner: open-atlas
-tags: [skills, orientation, getting-started]
----
-
 # Skills
 
 This directory holds the skills your AI can run inside this workspace. Read this file once. After that, the skill files speak for themselves.

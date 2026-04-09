@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Reasoning Strategy Templates — Reference
-doc_type: doc
-status: reviewed
-created: 2026-04-08
-updated: 2026-04-08
-owner: open-atlas
-tags: [strategy, templates, composability, reference]
----
-
 # Reasoning Strategy Templates
 
 This directory holds the reasoning strategy templates skills compose. If you've read [`workspace/templates/output-contract/`](../output-contract/) and the base output contract, this is the same architectural pattern applied to a different problem: instead of reinventing what the output *looks like*, skills compose output contracts. Instead of reinventing how to *reason*, skills compose strategies.

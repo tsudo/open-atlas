@@ -1,14 +1,3 @@
----
-title: Anti-Patterns for AI Workspaces
-doc_type: reference
-status: reviewed
-created: 2026-03-31
-updated: 2026-04-07
-owner: open-atlas
-tags: [reference, anti-patterns, voice, workspace, discipline]
-atlas_tier: framework
----
-
 # Anti-Patterns for AI Workspaces
 
 Common failure modes in AI-assisted workspaces. Recognizing these early prevents compounding problems across sessions.

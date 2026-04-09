@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # Quick Start — Two-File Minimum
 
 Don't want the full workspace? Start with just two files.

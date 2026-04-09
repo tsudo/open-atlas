@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Training — Pedagogical Material
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [training, pedagogy, kits, prompts]
----
-
 # Training
 
 This directory contains pedagogical material for *you*, the human. It's how you learn to build personas, skills, and workflows that work the way Open Atlas expects.

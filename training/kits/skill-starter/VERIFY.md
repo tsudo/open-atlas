@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Skill Starter Kit — VERIFY
-doc_type: kit-verify
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [kit, skill, verify, post-creation]
----
-
 # Skill Starter Kit — VERIFY
 
 Post-creation checks for skills produced by `SETUP.md`. Run this against any new skill before declaring the kit complete. Each check is yes/no — if any check fails, fix it before shipping the skill.

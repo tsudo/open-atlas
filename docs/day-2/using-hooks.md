@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Using Hooks
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [day-2, hooks, security]
----
-
 # Using Hooks
 
 > **v1.1 status:** Open Atlas v1.1 ships hook *designs* (explainers in `hooks/`), not working scripts. The working scripts and a test harness ship in v1.2. This doc describes the discipline that hooks enforce, the wiring you'll use when v1.2 ships, and how to implement your own version of any of these hooks now if you want. The "is this for you yet?" preflight below applies whether you're planning to wire them in v1.2 or build your own today.

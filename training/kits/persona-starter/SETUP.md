@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Persona Starter Kit — SETUP
-doc_type: kit-setup
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [kit, persona, setup, ai-guided]
----
-
 # Persona Starter Kit — SETUP
 
 > **What this kit does:** walks you through creating a working persona for your workspace via an AI-guided interview. By the end you'll have a `per_{name}.md` file in `workspace/personas/`, properly tagged as your content (`atlas_tier: user`), with all required sections filled in and validated.

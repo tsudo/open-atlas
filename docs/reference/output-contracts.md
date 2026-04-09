@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Output Contracts
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [reference, output-contracts, discipline, no-hedging]
----
-
 # Output Contracts
 
 An output contract is a written promise about what a skill (or persona) will produce. It's the difference between "the AI gave me something useful" and "the AI gave me exactly the thing it said it would give me."

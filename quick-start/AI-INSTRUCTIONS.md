@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # AI Workspace Instructions
 
 You are working in a structured AI workspace. Follow these rules to produce consistent, navigable, high-quality output.

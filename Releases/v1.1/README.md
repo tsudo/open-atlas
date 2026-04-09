@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Open Atlas v1.1 Release Notes
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [release, v1.1, changelog]
----
-
 # Open Atlas v1.1
 
 **Released:** 2026-04-07

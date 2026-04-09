@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: "Before & After: Same Prompt, Two Workspaces"
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [example, before-after, demonstration]
----
-
 # Before & After
 
 The same question, asked of an AI working in two different workspaces. No prompt engineering tricks. Just structure.

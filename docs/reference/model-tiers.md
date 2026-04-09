@@ -1,14 +1,3 @@
----
-title: Model Tiers — Multi-Model Template Routing
-doc_type: reference
-status: reviewed
-created: 2026-04-01
-updated: 2026-04-07
-owner: open-atlas
-tags: [reference, model-tiers, templates, multi-model, routing]
-atlas_tier: framework
----
-
 # Model Tiers — Multi-Model Template Routing
 
 When your workspace supports multiple AI models, templates shouldn't hardcode which model to use. Instead, they declare a **tier** — an intent-level preference that the tool resolves to a specific model.

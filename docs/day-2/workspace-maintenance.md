@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Workspace Maintenance
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [day-2, maintenance, lifecycle]
----
-
 # Workspace Maintenance
 
 Workspaces accumulate. Drafts pile up unread. Frontmatter drifts from the schema. Knowledge objects get stale. This doc covers the cadence and the moves that keep the workspace from rotting.

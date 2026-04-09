@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Hooks — Design Notes for v1.2
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [hooks, design-notes, v1.2-preview]
----
-
 # Hooks — Design Notes for v1.2
 
 > **v1.1 ships hook designs, not working scripts.** This directory contains explainers describing the three hooks Open Atlas plans to ship as working scripts in v1.2. Each explainer covers what the hook should catch, why, when it should block vs flag, and how to wire it. If you want to wire your own version of any of these hooks now, the explainers tell you what to enforce and why.

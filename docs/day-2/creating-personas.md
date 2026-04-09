@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Creating Personas
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [day-2, personas, creation]
----
-
 # Creating Personas
 
 A persona is a named role with bounded voice, opinions, and behaviors. This doc covers when to add one, how to design one, and how to test it.

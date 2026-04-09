@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Creating Skills
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [day-2, skills, creation]
----
-
 # Creating Skills
 
 A skill is a defined workflow the AI can execute. This doc covers when to add one, how to pick the right function class, and how to wire it.

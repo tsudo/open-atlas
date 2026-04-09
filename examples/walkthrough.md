@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # End-to-End Walkthrough: From Messy Problem to Structured Knowledge
 
 > **Reading this in v1.1?** This walkthrough demonstrates the *prompt-template path* — paste a template, fill in the inputs, get a structured output. The v1.1 production skills in [`workspace/skills/`](../workspace/skills/) automate the same flow with composable strategies and output contracts. For the equivalent skill-driven flow: invoke `think-it-through` (composes `options-and-tradeoffs`) for the analysis, then `capture` for the decision draft, then `extract-knowledge` for the durable insight. Both paths still ship in v1.1 — the prompt templates work for one-off conversations, the skills work for repeatable workflows.

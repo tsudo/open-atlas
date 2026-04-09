@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Compatibility — What Works Where
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [reference, compatibility, tools, platforms]
----
-
 # Compatibility — What Works Where
 
 An honest table of what Open Atlas features work in which AI tools, on which platforms. No marketing — actual support.

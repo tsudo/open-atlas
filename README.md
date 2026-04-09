@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 <p align="center">
   <img src="assets/open-atlas-logo.jpg" alt="Open Atlas" width="200">
 </p>

@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # Disclaimer
 
 Open Atlas is provided as-is, without warranty of any kind, express or implied.

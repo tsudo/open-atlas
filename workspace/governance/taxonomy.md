@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # AI Workspace Taxonomy
 
 Canonical definitions for the building blocks of an AI-augmented workspace. These terms prevent confusion when you and your AI discuss capabilities, structure, and behavior.

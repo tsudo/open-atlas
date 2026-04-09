@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # Human Operating Model
 
 This file teaches your AI how you think and work. Fill it in and point your AI agent at it — the more specific you are, the better your AI adapts to your style.

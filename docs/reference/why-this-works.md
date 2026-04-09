@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Why This Works
-doc_type: doc
-status: reviewed
-created: 2026-03-16
-updated: 2026-04-07
-owner: open-atlas
-tags: [reference, design-rationale, philosophy]
----
-
 # Why This Works
 
 The design principles behind Open Atlas. Read this when you want to understand *why* the conventions are the way they are, not just *what* they are.

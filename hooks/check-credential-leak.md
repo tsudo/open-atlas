@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: check-credential-leak — Explainer
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [hooks, security, credentials, explainer]
----
-
 # check-credential-leak — Explainer
 
 > **v1.1 status: design notes only.** This file is the design specification for a hook Open Atlas plans to ship as a working script in v1.2. The patterns, postures, and customization guidance below are the design contract. If you want to implement this hook now in your own scripting language, this file tells you what to enforce and why. See [README.md](README.md) for the v1.1 → v1.2 framing.

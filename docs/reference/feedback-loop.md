@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Feedback Loop — How the Workspace Learns
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [reference, feedback, learning, positive-signal]
----
-
 # Feedback Loop
 
 How Open Atlas separates **system learning** (the workspace getting better at its job) from **training** (pedagogical material for humans). And how POSITIVE_SIGNAL events make the workspace's learning visible.

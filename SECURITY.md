@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Security Policy
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [security, policy]
----
-
 # Security Policy
 
 ## Scope

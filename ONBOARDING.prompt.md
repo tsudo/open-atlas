@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # Open Atlas — Onboarding Prompt
 
 Copy everything below the line and paste it into an AI coding tool that can read and create files — **Claude Code, Cursor, Codex, or similar agentic tools.** This prompt creates folders and writes files, so it requires an AI that has filesystem access. It will not work in a browser-based chat like ChatGPT or claude.ai.

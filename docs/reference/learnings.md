@@ -1,14 +1,3 @@
----
-title: Cross-Session Learnings
-doc_type: reference
-status: reviewed
-created: 2026-03-31
-updated: 2026-04-07
-owner: open-atlas
-tags: [reference, learnings, memory, cross-session, feedback-loop]
-atlas_tier: framework
----
-
 # Cross-Session Learnings
 
 > **Note on naming:** This page is about the *system's* learning loop — how your workspace captures execution failures, surprising wins, and recurring patterns over time so future sessions don't re-discover the same lessons. That is distinct from the *training/* folder, which is human pedagogy (the documents you read to learn the framework). Two different concepts: "learning" = system feedback, "training" = human onboarding. Don't conflate them.

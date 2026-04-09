@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Manifest — File Ownership Model
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [reference, manifest, ownership, upgrades]
----
-
 # Manifest — File Ownership Model
 
 The `.atlas-manifest.yml` file declares which files Open Atlas owns vs which files you own. This matters when you want to update Open Atlas in the future and not lose your customizations.

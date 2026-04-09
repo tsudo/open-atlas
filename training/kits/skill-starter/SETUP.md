@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Skill Starter Kit — SETUP
-doc_type: kit-setup
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [kit, skill, setup, ai-guided]
----
-
 # Skill Starter Kit — SETUP
 
 > **What this kit does:** walks you through creating a working skill for your workspace via an AI-guided interview. By the end you'll have a skill file in `workspace/skills/`, properly tagged as your content (`atlas_tier: user`), with a function classification, required frontmatter, a procedure, an output contract, and (for gate skills) a NO-HEDGING contract — all validated against `VERIFY.md`.

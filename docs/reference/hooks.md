@@ -1,14 +1,3 @@
----
-title: Pre-Execution Hooks
-doc_type: reference
-status: reviewed
-created: 2026-03-31
-updated: 2026-04-07
-owner: open-atlas
-tags: [reference, hooks, security, governance, claude-code]
-atlas_tier: framework
----
-
 # Pre-Execution Hooks
 
 > **v1.1 status:** Open Atlas v1.1 ships hook *designs* (explainers in the `hooks/` directory at the repo root), not working scripts. Working scripts and a test harness ship in v1.2. This reference doc describes the hook concept and the discipline hooks enforce — the patterns below are the design contract that v1.2 will deliver, and that you can implement in your own scripting language now if you want.

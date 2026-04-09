@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Output Contracts — Reference
-doc_type: doc
-status: reviewed
-created: 2026-04-08
-updated: 2026-04-08
-owner: open-atlas
-tags: [output-contracts, templates, composability, reference]
----
-
 # Output Contracts
 
 This directory holds the output contract templates skills compose. If you've read [`workspace/templates/strategy/`](../strategy/) and the four reasoning strategies, this is the same architectural pattern applied to a different problem: instead of reinventing how to *reason*, skills compose strategies. Instead of reinventing what their *output looks like*, skills compose output contracts.

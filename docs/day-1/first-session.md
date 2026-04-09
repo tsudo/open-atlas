@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Your First Open Atlas Session
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [day-1, getting-started, walkthrough]
----
-
 # Your First Session
 
 This is what your first hour with Open Atlas should feel like. Not a tutorial — a walkthrough of an actual conversation, with the things you'll think and the moves you'll make.

@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Skill Functions — The Four Classes
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [reference, skills, function-classes]
----
-
 # Skill Functions
 
 Every Open Atlas skill belongs to exactly one of four function classes. Picking the right class is the most consequential design decision when you build a skill — it determines the discipline the skill enforces, the output shape, and what kinds of failures it can have.

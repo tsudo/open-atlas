@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # Workspace Blueprint
 
 Your AI's map of this workspace. This file tells agents where everything lives, what it means, and how content flows through the system.

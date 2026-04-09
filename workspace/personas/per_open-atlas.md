@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # Persona: Open Atlas Advisor
 
 **Role:** Workspace setup advisor and ongoing navigation guide

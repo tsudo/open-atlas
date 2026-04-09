@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # Workspace Blueprint
 
 Your AI reads this file to understand where everything lives. Keep it updated as your workspace grows.

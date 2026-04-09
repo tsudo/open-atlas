@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Open Atlas Docs — Index
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [docs, index, navigation]
----
-
 # Open Atlas Docs
 
 Three layers, by intent.

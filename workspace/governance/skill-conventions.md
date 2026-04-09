@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Skill Conventions
-doc_type: governance
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [governance, skills, conventions]
----
-
 # Skill Conventions
 
 How skills are organized, named, registered, and invoked in an Open Atlas workspace.

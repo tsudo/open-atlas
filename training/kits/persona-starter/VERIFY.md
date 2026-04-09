@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Persona Starter Kit — VERIFY
-doc_type: kit-verify
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [kit, persona, verify, post-creation]
----
-
 # Persona Starter Kit — VERIFY
 
 Post-creation checks for personas produced by `SETUP.md`. Run this against any new persona before declaring the kit complete. Each check is yes/no — if any check fails, fix it before shipping the persona.

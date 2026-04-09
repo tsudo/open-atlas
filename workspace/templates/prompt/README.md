@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Prompt Templates — Reference
-doc_type: doc
-status: reviewed
-created: 2026-04-08
-updated: 2026-04-08
-owner: open-atlas
-tags: [prompt-templates, templates, reference]
----
-
 # Prompt Templates
 
 This directory holds the user-facing prompt templates Open Atlas ships. Each one is a structured thinking pattern you can paste into any AI tool to get a more reliable kind of conversation than ad-hoc prompting produces.

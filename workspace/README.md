@@ -1,7 +1,3 @@
----
-atlas_tier: framework
----
-
 # Open Atlas Workspace
 
 This is your AI governance workspace. Everything your AI agent needs to navigate, create, and maintain structured work lives here.

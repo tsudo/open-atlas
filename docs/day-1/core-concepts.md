@@ -1,14 +1,3 @@
----
-atlas_tier: framework
-title: Core Concepts
-doc_type: doc
-status: reviewed
-created: 2026-04-07
-updated: 2026-04-07
-owner: open-atlas
-tags: [day-1, concepts, mental-model]
----
-
 # Core Concepts
 
 Open Atlas has five concepts. You can run a useful workspace with two of them. The other three are when you want more.

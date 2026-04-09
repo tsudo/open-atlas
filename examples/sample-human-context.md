@@ -1,4 +1,5 @@
 ---
+atlas_tier: framework
 title: "Human Operating Model — Alex Chen"
 doc_type: note
 status: reviewed

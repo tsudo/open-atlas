@@ -1,4 +1,10 @@
+---
+atlas_tier: framework
+---
+
 # End-to-End Walkthrough: From Messy Problem to Structured Knowledge
+
+> **Reading this in v1.1?** This walkthrough demonstrates the *prompt-template path* — paste a template, fill in the inputs, get a structured output. The v1.1 production skills in [`workspace/skills/`](../workspace/skills/) automate the same flow with composable strategies and output contracts. For the equivalent skill-driven flow: invoke `think-it-through` (composes `options-and-tradeoffs`) for the analysis, then `capture` for the decision draft, then `extract-knowledge` for the durable insight. Both paths still ship in v1.1 — the prompt templates work for one-off conversations, the skills work for repeatable workflows.
 
 This walkthrough shows how Open Atlas templates work together in practice. Follow along with a real scenario to see the full flow.
 
@@ -34,9 +40,9 @@ The analysis helped you decide: **SQLite for now, migrate to Postgres if you add
 ---
 title: "Database Selection: SQLite for MVP"
 doc_type: decision
-status: accepted
-created: 2024-03-15
-updated: 2024-03-15
+status: reviewed
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
 owner: you
 tags: [architecture, database, task-app]
 ---
@@ -59,8 +65,8 @@ That's a reusable insight. Use `workspace/templates/doc/knowledge-object.md`:
 title: "SQLite Concurrency Limits and Migration Triggers"
 doc_type: kno
 status: draft
-created: 2024-03-15
-updated: 2024-03-15
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
 owner: you
 tags: [database, sqlite, architecture]
 source: ai-assisted
@@ -81,7 +87,7 @@ In three steps, a messy "should I use SQLite?" turned into:
 | Artifact | Template used | Location | Status |
 | --- | --- | --- | --- |
 | Structured analysis | `analysis.prompt.md` | `drafts/` | Working draft |
-| Decision record | `decision-record.md` | `knowledge/decisions/` | Accepted |
+| Decision record | `decision-record.md` | `knowledge/decisions/` | Reviewed |
 | Knowledge object | `knowledge-object.md` | `knowledge/engineering/` | Draft (needs review) |
 
 **The key insight:** Each artifact built on the previous one. The analysis informed the decision. The decision surfaced reusable knowledge. The knowledge object will inform future decisions — without re-researching SQLite concurrency from scratch.

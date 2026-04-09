@@ -1,3 +1,7 @@
+---
+atlas_tier: framework
+---
+
 <p align="center">
   <img src="assets/open-atlas-logo.jpg" alt="Open Atlas" width="200">
 </p>
@@ -8,183 +12,175 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-CC--BY--4.0-lightgrey.svg" alt="License: CC-BY-4.0">
-  <img src="https://img.shields.io/badge/Version-v1-blue.svg" alt="Version: v1">
+  <img src="https://img.shields.io/badge/Version-v1.1-blue.svg" alt="Version: v1.1">
   <img src="https://img.shields.io/badge/AI-Workspace%20Framework-purple.svg" alt="AI Workspace">
 </p>
 
-Your folder structure is part of every AI prompt — whether you designed it that way or not. The way you organize information determines what AI tools can find, retrieve, and reason about. Most people never think about this. Open Atlas gives you the foundation: a workspace structure, metadata standards, and document templates that make AI agents more effective from day one.
+Your folder structure is part of every AI prompt, whether you designed it that way or not. **Open Atlas gives your AI a workspace it can navigate, named personas it can adopt, and skills it can execute** — so the AI works *with* your conventions instead of around them.
 
-This is not a prompt library, a Claude Code config, or an automation framework. It's an opinionated, human-governed context architecture that works with any AI tool that can read files.
+**See the difference:** [examples/before-after.md](examples/before-after.md) — same prompt, two workspaces. Five minutes.
+
+> **You do not need all of this.** The minimum-viable adoption path is two concepts (workspace + one persona) and zero hooks. Start there. Add more when you've felt the gap. See [docs/day-1/core-concepts.md](docs/day-1/core-concepts.md).
 
 ---
 
 ## Contents
 
+- [Walkthrough — see it in action](#walkthrough--see-it-in-action)
 - [Quick Start](#quick-start)
-- [Two-File Minimum](#two-file-minimum)
-- [What's Inside](#whats-inside)
-- [Choose Your Path](#choose-your-path)
-- [Who This Is For](#who-this-is-for)
-- [Blog Series](#blog-series)
+- [Three paths in](#three-paths-in)
+- [What Open Atlas does](#what-open-atlas-does)
+- [What Open Atlas does NOT do](#what-open-atlas-does-not-do)
+- [What's inside](#whats-inside)
+- [Documentation](#documentation)
 - [Contributing](#contributing)
 - [License](#license)
 
 ---
 
+## Walkthrough — see it in action
+
+Before reading anything else, look at what Open Atlas does in practice:
+
+**[examples/walkthrough.md](examples/walkthrough.md)** — A messy "should I use SQLite or Postgres?" question taken through three templates: analysis → decision → durable knowledge. Three artifacts. Each builds on the last. You can read it in five minutes.
+
+**[examples/before-after.md](examples/before-after.md)** — Side-by-side: the same prompt asked of an AI working in a junk-drawer directory vs. an AI working in an Open Atlas workspace. The difference is not subtle.
+
+If those land for you, the rest of this README will make sense. If they don't, this framework probably isn't for you yet.
+
+---
+
 ## Quick Start
 
-### Option A: Let your AI do it (if your tool can clone repos)
+Three steps. No installation, no dependencies, no runtime. Each step is one move.
 
-```text
-Clone the Open Atlas repo from github.com/tsudo/open-atlas into a temp folder. Copy the workspace/ folder and the quick-start/AI-INSTRUCTIONS.md file into my current working directory. Then read the ONBOARDING.prompt.md and walk me through the setup.
+**Step 1.** Clone the repo (or download the zip).
+
+```bash
+git clone https://github.com/tsudo/open-atlas.git
+cd open-atlas
 ```
 
-Paste that into Claude Code, Cursor, or any agentic tool with filesystem and network access. The AI handles the rest.
+**Step 2.** Open the directory in your AI tool — Claude Code, Cursor, Codex, or anything that can read files.
 
-> **Note:** Some tools (like Codex) run in a sandbox and can't clone repos. If Option A doesn't work, use Option B — it always works.
+**Step 3.** Paste this one sentence to your AI:
 
-### Option B: Manual setup (works with any tool)
+> Read `workspace/README.md` and walk me through what to do next.
 
-1. **Copy the `workspace/` folder** into your project root
-2. **Open `ONBOARDING.prompt.md`**, copy the prompt, and paste it into an agentic AI tool (Claude Code, Cursor, Codex)
-3. **Answer 4 questions** — the AI will set up your workspace and create your first human context file
-4. **Start using templates** — try the analysis prompt on a real problem
+That's it. The AI reads the workspace orientation, recognizes the structure, and routes you to the right next move based on what you tell it you want to do.
 
-Either way, you'll have a structured, AI-navigable workspace in about 30 minutes.
-
-**Want to see what this looks like in practice?** The [walkthrough](examples/walkthrough.md) takes a messy problem through three templates and shows the payoff:
-
-| Step | Template | Output |
-| --- | --- | --- |
-| Analyze the problem | `analysis.prompt.md` | Structured options + recommendation |
-| Record the decision | `decision-record.md` | Decision with rationale and risks |
-| Extract durable knowledge | `knowledge-object.md` | Reusable reference for future decisions |
-
-Three steps. Three artifacts. Each one builds on the last. That's what "templates enable compounding" looks like.
+When you want more — slash commands, custom skills, your own personas — see [docs/day-2/](docs/day-2/). When you want to understand the design — see [docs/reference/why-this-works.md](docs/reference/why-this-works.md).
 
 ---
 
-## Two-File Minimum
+## Three paths in
 
-Don't want the full workspace? Start with two core files and a few folders:
+Different starting points need different first moves.
 
-1. Copy [`quick-start/AI-INSTRUCTIONS.md`](quick-start/AI-INSTRUCTIONS.md) and [`quick-start/BLUEPRINT.md`](quick-start/BLUEPRINT.md) into your project root
-2. Create starter folders: `mkdir -p knowledge/decisions projects drafts archive`
-3. Wire it to your tool — rename the instructions file ([see wiring table](quick-start/))
-4. Start working — your AI reads both files automatically
-
-Five minutes of setup, immediately better AI output. Upgrade to the full workspace when you're ready.
+| You are... | Start here |
+|---|---|
+| **Just installed Claude Code (or Cursor / Codex)** | [docs/day-1/first-session.md](docs/day-1/first-session.md) → [docs/day-1/core-concepts.md](docs/day-1/core-concepts.md). One session, two concepts, no wiring required. |
+| **Building an AI workflow for your team** | [docs/day-1/](docs/day-1/) for orientation → [docs/day-2/](docs/day-2/) for creating personas, skills, hooks → [docs/reference/](docs/reference/) for the design rationale. |
+| **Forking it for your own workflow** | [docs/reference/why-this-works.md](docs/reference/why-this-works.md) first — so you know what the conventions are doing before you change them. Then [docs/reference/manifest.md](docs/reference/manifest.md) for the file ownership model. |
 
 ---
 
-## What's Inside
+## What Open Atlas does
+
+- **Gives the AI a predictable workspace** — `workspace/` with conventions for personas, skills, knowledge, drafts, templates
+- **Ships named personas** the AI can adopt — `per_open-atlas` (default), plus three example personas in `training/kits/persona-starter/examples/` (`per_advisor`, `per_reviewer`, `per_librarian`)
+- **Ships four production skills + a starter** in `workspace/skills/` — `capture` (capture a thought), `think-it-through` (decision help with anti-sycophancy gates), `extract-knowledge` (turn an insight into a durable artifact), `review-context` (workspace audit), and `my-next-skill` (starter scaffold for building your own). Each skill composes a reasoning strategy and the base output contract.
+- **Ships hook designs as explainers** — credential-leak detection, prompt-injection flagging, convention checks. Working scripts and a test harness ship in v1.2; the v1.1 explainers are the design contract you can implement in your own scripting language now if you want.
+- **Includes hardened templates** for personas and skills with required sections (especially "what this does NOT do") so what you build is consistent
+- **Ships every example with the kit that built it** — the `training/` directory has the same starter kits, prompts, and walkthroughs you'd use to build your own personas and skills
+
+---
+
+## What Open Atlas does NOT do
+
+Be explicit about the boundaries:
+
+- **Not a security boundary.** Hooks are tripwires, not jails.
+- **Not a sandbox.** The AI can do whatever your tool allows it to do.
+- **Not a methodology.** It's a set of conventions you can edit, replace, or ignore.
+- **Not an agent framework.** No LangChain, no AutoGen, no orchestration runtime.
+- **Not vendor-locked.** Works with any AI tool that can read markdown files.
+- **Not an organizational governance program.** It governs AI behavior *inside* a workspace. If you need acceptable-use policy, risk tiers, or board reporting — that's a different layer. See the SC handoff in [docs/reference/why-this-works.md](docs/reference/why-this-works.md).
+- **Not a learning management system.** The feedback loop is light by design.
+
+---
+
+## What's inside
 
 ```text
 open-atlas/
-├── README.md                    ← You are here
-├── LICENSE                      ← CC-BY-4.0
-├── DISCLAIMER.md                ← Not professional advice
-├── ONBOARDING.prompt.md         ← Paste into your AI to get started
+├── README.md                       ← You are here
+├── LICENSE                         ← CC-BY-4.0
+├── SECURITY.md                     ← Reporting and scope
+├── DISCLAIMER.md                   ← Not professional advice
+├── ONBOARDING.prompt.md            ← Single-pass setup prompt for AI tools
+├── .atlas-manifest.yml             ← File ownership manifest (core / framework / user)
 │
-├── quick-start/                 ← Two-file minimum (AI-INSTRUCTIONS.md + BLUEPRINT.md)
+├── workspace/                      ← The starter workspace — copy or clone in place
+│   ├── README.md                   ← Read this first in every session
+│   ├── BLUEPRINT.md                ← The AI's map of the workspace
+│   ├── governance/                 ← Conventions (skill conventions, taxonomy)
+│   ├── templates/                  ← Persona, skill, doc, schema templates
+│   ├── personas/                   ← per_open-atlas (your default persona)
+│   ├── skills/                     ← 4 production skills + my-next-skill starter
+│   ├── knowledge/                  ← Durable reference material
+│   ├── drafts/                     ← Work in progress
+│   └── archive/                    ← Completed work
 │
-├── workspace/                   ← The starter kit — copy this into your project
-│   ├── README.md                ← Start here
-│   ├── BLUEPRINT.md             ← Your AI's map of the workspace
-│   ├── governance/
-│   │   └── taxonomy.md          ← 10 core AI workspace concepts defined
-│   ├── templates/
-│   │   ├── prompt/              ← Thinking patterns (analysis, decision, extraction)
-│   │   ├── doc/                 ← Document skeletons (7 templates)
-│   │   └── schema/              ← Metadata standards (frontmatter, knowledge objects)
-│   ├── personas/
-│   │   └── per_open-atlas.md    ← Workspace advisor persona (working example)
-│   ├── context/
-│   │   └── human-operating-model.md  ← Teach your AI how you think
-│   ├── knowledge/               ← Durable reference material by topic
-│   ├── projects/                ← Your active projects
-│   ├── drafts/                  ← Work in progress
-│   └── archive/                 ← Completed work
+├── hooks/                          ← Hook design notes (working scripts in v1.2)
+│   ├── README.md
+│   ├── check-credential-leak.md
+│   ├── check-injection-egress.md
+│   └── check-pre-action.md
 │
-├── examples/                    ← Filled-in examples for reference
-│   ├── walkthrough.md           ← End-to-end: messy problem → analysis → decision → knowledge
-│   ├── sample-kno.md            ← Example knowledge object
-│   ├── sample-decision.md       ← Example decision record
-│   └── sample-human-context.md  ← Example human operating model (fictional)
+├── docs/                           ← Three-layer documentation
+│   ├── README.md
+│   ├── day-1/                      ← First-session walkthrough + core concepts
+│   ├── day-2/                      ← Creating personas, skills, hooks; maintenance
+│   └── reference/                  ← Anti-patterns, output contracts, manifest, compatibility, why-this-works
 │
-└── docs/
-    └── why-this-works.md        ← Design philosophy
+├── training/                       ← Pedagogical material (kits, prompts, examples)
+│   ├── README.md
+│   ├── kits/persona-starter/       ← Structured AI-guided interview to build a persona
+│   ├── kits/skill-starter/         ← Same for skills
+│   └── prompts/                    ← Single-pass alternatives to the kits
+│
+├── examples/                       ← End-to-end and side-by-side examples
+│   ├── walkthrough.md              ← Messy problem → analysis → decision → KNO
+│   ├── before-after.md             ← Junk-drawer vs Open Atlas, same prompt
+│   ├── sample-kno.md
+│   ├── sample-decision.md
+│   └── sample-human-context.md
+│
+└── Releases/
+    └── v1.1/README.md              ← Release notes
 ```
 
-### Templates Included
-
-**Prompt templates** — structured thinking patterns:
-
-| Template | Use when you need |
-| --- | --- |
-| `analysis.prompt.md` | Structured reasoning, tradeoff evaluation, planning |
-| `decision.prompt.md` | Recommendation between choices, go/no-go decisions |
-| `extraction.prompt.md` | Facts and structure from raw text or conversations |
-
-**Document templates** — skeletons for recurring document types:
-
-| Template | Use when you need |
-| --- | --- |
-| `readme.template.md` | A README for any folder, project, or tool |
-| `decision-record.md` | To document a deliberated choice with rationale |
-| `knowledge-object.md` | Durable reference knowledge (frameworks, patterns, how-tos) |
-| `project-brief.md` | A scoped project definition with success criteria |
-| `research-note.md` | An investigation with findings and confidence levels |
-| `procedure.md` | Step-by-step operational instructions |
-| `meeting-notes.md` | Meeting capture with decisions and actions |
-
-**Schemas** — metadata standards:
-
-| Schema | What it defines |
-| --- | --- |
-| `frontmatter.md` | YAML metadata fields for all documents |
-| `knowledge-object.md` | Knowledge object types, lifecycle, and naming |
-
 ---
 
-## Choose Your Path
+## Documentation
 
-| Starting point | What to do |
-| --- | --- |
-| **Just installed an AI tool** | [Quick Start](#quick-start) — copy workspace/, run onboarding prompt |
-| **Want the minimum** | [Two-File Minimum](#two-file-minimum) — AI-INSTRUCTIONS.md + BLUEPRINT.md, five minutes |
-| **Have existing files** | Copy `workspace/` alongside your files, tell the onboarding prompt "I have existing files" — it'll do a gap analysis |
-| **Already organized (PARA, etc.)** | Browse `workspace/` and cherry-pick templates, schemas, or the blueprint pattern |
-
----
-
-## Who This Is For
-
-**Builders who use AI daily and know their workspace is a mess.** You've been meaning to organize your files. Open Atlas is the structure you'd build if you had a weekend — except it's already built.
-
-**AI engineers who want governance without overhead.** You know metadata matters. You know templates compound. You just need a starting point that isn't over-engineered.
-
-**Someone who just installed Claude Code or Cursor.** A friend sent you this link. Start with the [two-file quick start](quick-start/) or the full onboarding prompt. You'll be set up in 30 minutes.
-
----
-
-## Blog Series
-
-These posts explain the thinking behind Open Atlas:
-
-1. **[Context Engineering: Why Your Folder Structure Is an AI Problem](https://keithcrawford.me/blog/context-engineering-folder-structure-ai)** — The insight that started it all
-2. **Output Contracts, Schemas, and the Layer Everyone Skips** *(coming soon)*
-3. **Teaching Your AI Who You Are: Human Context Files** *(coming soon)*
+- **[docs/README.md](docs/README.md)** — full documentation index
+- **[docs/day-1/](docs/day-1/)** — first session, core concepts
+- **[docs/day-2/](docs/day-2/)** — creating personas, creating skills, using hooks, workspace maintenance
+- **[docs/reference/](docs/reference/)** — anti-patterns, feedback loop, skill functions, output contracts, manifest, compatibility, why-this-works
 
 ---
 
 ## Contributing
 
-Open Atlas is maintained by one person and contributions are welcome. If you:
+Open Atlas is maintained as an open framework. Contributions welcome:
 
-- **Found a bug or gap** — open an issue
-- **Have a template to share** — open a PR
-- **Adapted this for your domain** — I'd love to hear about it
+- **Found a bug or gap** → open an issue
+- **Have a template, hook, or example to share** → open a PR
+- **Adapted this for your domain** → I'd love to hear about it
+
+See [SECURITY.md](SECURITY.md) for security-related reporting.
 
 ---
 
@@ -198,7 +194,7 @@ See [DISCLAIMER.md](DISCLAIMER.md) for important notes on scope and liability.
 
 <p align="center">
   <img src="assets/open-atlas-logo.jpg" alt="Open Atlas" width="80"><br>
-  <strong>Open Atlas</strong> — an opinionated AI workspace framework<br>
+  <strong>Open Atlas</strong> — a free AI workspace framework<br>
   Created by <a href="https://keithcrawford.me">Keith Crawford</a> ·
   <a href="https://open-atlas.dev">open-atlas.dev</a> ·
   <a href="https://x.com/tsudo">@tsudo</a> ·

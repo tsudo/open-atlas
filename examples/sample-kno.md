@@ -1,9 +1,11 @@
 ---
+atlas_tier: framework
 title: "Context Windows Are a Resource, Not a Feature"
 doc_type: kno
+kno_type: principle
 status: reviewed
-created: 2024-03-15
-updated: 2024-03-15
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
 owner: alex
 tags: [ai, context-management, productivity]
 source: human
@@ -11,6 +13,8 @@ source_links:
   - https://example.com/context-engineering-article
 confidence: high
 ---
+
+> **Sample KNO showing a filled-in knowledge object.** This file demonstrates the v1.1 KNO schema (`doc_type: kno`, `kno_type: principle`, optional `confidence`, `source` and `source_links` fields). For how the v1.1 production skills produce knowledge artifacts like this automatically, see [`workspace/skills/extract-knowledge.md`](../workspace/skills/extract-knowledge.md). Use this file as a reference for what a high-confidence, reviewed KNO looks like.
 
 # Context Windows Are a Resource, Not a Feature
 

@@ -1,6 +1,16 @@
+---
+atlas_tier: framework
+---
+
 # Open Atlas Workspace
 
 This is your AI governance workspace. Everything your AI agent needs to navigate, create, and maintain structured work lives here.
+
+---
+
+## You Do Not Need All Of This
+
+Open Atlas is a starter kit, not a checklist. Adopt the parts that help. Skip the parts that don't. The two-file `quick-start/` is enough for many people. The full workspace exists for when you want more — add templates as you need them, leave the rest. The point is structure that earns its place, not structure for structure's sake.
 
 ---
 

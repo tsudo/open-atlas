@@ -1,4 +1,5 @@
 ---
+atlas_tier: framework
 title: "[Decision Title]"
 doc_type: decision
 status: draft

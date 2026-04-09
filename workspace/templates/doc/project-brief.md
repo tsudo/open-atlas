@@ -1,4 +1,5 @@
 ---
+atlas_tier: framework
 title: "[Project Name] — Brief"
 doc_type: note
 status: draft

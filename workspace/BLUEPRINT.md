@@ -1,3 +1,7 @@
+---
+atlas_tier: framework
+---
+
 # Workspace Blueprint
 
 Your AI's map of this workspace. This file tells agents where everything lives, what it means, and how content flows through the system.
@@ -30,6 +34,22 @@ Your AI's map of this workspace. This file tells agents where everything lives, 
 
 ---
 
+## Before You Act
+
+Pre-action checks. Run through these before any non-trivial Write or Edit:
+
+| When you're about to... | Check first |
+|---|---|
+| Search the workspace | This blueprint for the path map — don't search blindly |
+| Write a plan or analysis without a project home | Route to `drafts/`, not an ad-hoc `plans/` directory |
+| Write a durable artifact (KNO, persona, skill) | Load the governing template from `templates/` first |
+| Build new framework infrastructure | Confirm the change has been thought through (red-team, plan, or ADR-equivalent) |
+| Create something that crosses zones (knowledge → published, draft → canonical) | Pause and consider whether a runtime brief helps |
+
+These are conventions, not enforcement. The `hooks/check-pre-action.md` design note describes how a flag-only hook can catch slip-ups deterministically — working scripts ship in Open Atlas v1.2.
+
+---
+
 ## Content Routing
 
 When your AI creates or encounters content, this table tells it where to put it.
@@ -49,7 +69,7 @@ When your AI creates or encounters content, this table tells it where to put it.
 
 | Path | Access | Why |
 | --- | --- | --- |
-| `governance/` | Read-only | Authority layer — don't modify without explicit instruction |
+| `governance/` | Read mostly | Authority layer — modify deliberately, not casually. Convention, not enforcement. |
 | `templates/` | Read/Write | Iterate freely — templates evolve |
 | `personas/` | Read/Write | Add or adjust behavioral profiles |
 | `context/` | Read/Write | Update as your preferences change |
@@ -69,7 +89,7 @@ This file is a starting point. As your workspace grows:
 3. **Add access rules** for sensitive areas (credentials, personal docs)
 4. **Point your AI here** — reference this file in your system prompt or CLAUDE.md so it knows to check the map first
 
-The goal: your AI should never have to guess where something lives.
+The goal: your AI should consult this map before searching, not as a replacement for searching when it's genuinely needed. The blueprint is the *first* place to look, not the *only* place.
 
 ---
 

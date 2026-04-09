@@ -1,4 +1,5 @@
 ---
+atlas_tier: framework
 title: "[Research Question — Short Label]"
 doc_type: analysis
 status: draft

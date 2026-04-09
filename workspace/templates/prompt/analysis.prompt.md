@@ -1,3 +1,7 @@
+---
+atlas_tier: framework
+---
+
 # Template: Analysis
 
 Use when you need structured reasoning, architecture design, decomposition, risk analysis, tradeoff evaluation, or planning.

@@ -1,3 +1,7 @@
+---
+atlas_tier: framework
+---
+
 # [Title]
 
 **README Type:** directory-index | project-root | tool-reference | schema-reference

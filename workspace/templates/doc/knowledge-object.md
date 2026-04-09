@@ -1,4 +1,5 @@
 ---
+atlas_tier: framework
 title: [Title]
 doc_type: kno
 status: draft

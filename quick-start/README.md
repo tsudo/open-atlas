@@ -1,6 +1,12 @@
+---
+atlas_tier: framework
+---
+
 # Quick Start — Two-File Minimum
 
 Don't want the full workspace? Start with just two files.
+
+> **Relationship to the v1.1 minimum-viable-adoption path:** This is the *radically* minimal path — two files, no workspace structure, five minutes of setup. The v1.1 minimum-viable-adoption path in [`docs/day-1/core-concepts.md`](../docs/day-1/core-concepts.md) is the *just-enough* path — full workspace, but you only learn two of the five concepts to start. Pick this page if you want the absolute floor; pick day-1/core-concepts.md if you want the floor of the *full* workspace experience without learning everything at once.
 
 ## What You Get
 

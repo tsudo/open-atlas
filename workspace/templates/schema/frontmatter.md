@@ -1,3 +1,7 @@
+---
+atlas_tier: framework
+---
+
 # Frontmatter Schema
 
 Standard YAML metadata for durable markdown documents in your workspace.

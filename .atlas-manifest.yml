@@ -1,0 +1,88 @@
+# Open Atlas File Ownership Manifest
+# Declares three tiers for upgrade safety. Future upgrade tooling reads this
+# to know what to leave alone (user content), what to upgrade with consent
+# (framework content), and what is immutable (core).
+#
+# Tiers:
+#   core       - immutable framework foundation; never modified
+#   framework  - Atlas-owned content that improves over time; replaced on upgrade with diff prompt
+#   user       - user-owned absolutely; never touched on upgrade
+#
+# Default tier for any unlisted file: user (safe default)
+#
+# Glob precedence: across tiers, the most specific path wins. The starter persona
+# `workspace/personas/per_open-atlas.md` is explicitly listed under framework, even
+# though `workspace/personas/per_*.md` is in the user tier — this is intentional and
+# documented in the exceptions block at the bottom.
+
+version: 1.1
+generated: 2026-04-07
+atlas_version: "1.1"
+
+tiers:
+  core:
+    description: Immutable framework foundation, never modified by Atlas
+    paths:
+      - LICENSE
+      - .atlas-manifest.yml
+      - SECURITY.md
+
+  framework:
+    description: Atlas-owned content that improves over time, replaced on upgrade with diff prompt
+    paths:
+      - README.md
+      - DISCLAIMER.md
+      - ONBOARDING.prompt.md
+      - assets/**
+      - quick-start/**
+      - workspace/BLUEPRINT.md
+      - workspace/README.md
+      - workspace/governance/**
+      - workspace/templates/**  # includes templates/strategy/, templates/output-contract/, templates/persona/, templates/skill/, templates/doc/, templates/schema/, templates/prompt/
+      - workspace/personas/per_open-atlas.md
+      - workspace/skills/README.md
+      - workspace/skills/capture.md
+      - workspace/skills/think-it-through.md
+      - workspace/skills/extract-knowledge.md
+      - workspace/skills/review-context.md
+      - workspace/skills/my-next-skill.md
+      - workspace/context/human-operating-model.md
+      - hooks/**
+      - examples/**
+      - training/**
+      - docs/**
+      - Releases/**
+
+  user:
+    description: User-owned absolutely, never touched on upgrade
+    paths:
+      - workspace/personas/per_*.md  # all personas EXCEPT per_open-atlas.md (see exceptions)
+      - workspace/skills/**
+      - workspace/knowledge/**
+      - workspace/decisions/**
+      - workspace/drafts/**
+      - workspace/projects/**
+      - workspace/archive/**
+
+# Explicit exceptions where the framework tier overrides a user-tier glob.
+# These files ship as framework content even though they live in directories
+# whose other contents default to user.
+exceptions:
+  framework_overrides_user_pattern:
+    - workspace/personas/per_open-atlas.md  # The starter persona — framework. User-created personas remain user.
+    - workspace/skills/README.md  # The skills orientation doc — framework. User-created skill files remain user.
+    - workspace/skills/capture.md  # Production skill — framework. Edit creates a user fork.
+    - workspace/skills/think-it-through.md  # Production skill — framework. Edit creates a user fork.
+    - workspace/skills/extract-knowledge.md  # Production skill — framework. Edit creates a user fork.
+    - workspace/skills/review-context.md  # Production skill — framework. Edit creates a user fork.
+    - workspace/skills/my-next-skill.md  # Starter scaffold — framework. Copying it (intended use) creates a user file.
+
+# Notes:
+# - The colleague's *filled-in* version of `workspace/context/human-operating-model.md`
+#   is technically a customization of a framework file. Upgrade tooling SHOULD prompt
+#   before overwriting if the file has been edited (diff-then-decide pattern).
+# - Kit-generated files (personas via persona-starter, skills via skill-starter) are
+#   created with `atlas_tier: user` in their frontmatter so the upgrade tooling can
+#   verify ownership without consulting this manifest.
+# - Files with no frontmatter `atlas_tier:` field that match no tier in this manifest
+#   default to `user` (safe default — Atlas never touches what it doesn't own).

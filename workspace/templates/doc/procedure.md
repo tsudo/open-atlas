@@ -1,4 +1,5 @@
 ---
+atlas_tier: framework
 title: "[Procedure Name]"
 doc_type: procedure
 status: draft

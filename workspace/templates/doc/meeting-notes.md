@@ -1,4 +1,5 @@
 ---
+atlas_tier: framework
 title: "[Meeting Topic] — YYYY-MM-DD"
 doc_type: note
 status: draft

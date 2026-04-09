@@ -1,3 +1,7 @@
+---
+atlas_tier: framework
+---
+
 # Open Atlas — Onboarding Prompt
 
 Copy everything below the line and paste it into an AI coding tool that can read and create files — **Claude Code, Cursor, Codex, or similar agentic tools.** This prompt creates folders and writes files, so it requires an AI that has filesystem access. It will not work in a browser-based chat like ChatGPT or claude.ai.
@@ -104,6 +108,13 @@ Adapt folder names and add domain-specific folders based on the user's work type
    - "Your workspace README has a day-by-day guide for your first week — read `workspace/README.md` tomorrow."
    - "Your CLAUDE.md will automatically load the workspace rules in future sessions — you don't need to paste anything again."
    - "If you want guided help later, activate the Open Atlas advisor persona at `personas/per_open-atlas.md`."
+
+7. **What's next — pointers into the docs.** Tell the user where to go when they want more:
+   - "When you're ready to build your own personas: `training/kits/persona-starter/SETUP.md` (structured interview) or `training/prompts/create-persona.prompt.md` (faster, single-pass)."
+   - "When you're ready to build your own skills: `training/kits/skill-starter/SETUP.md` or `training/prompts/create-skill.prompt.md`. The four function classes (gate / steward / workflow / utility) are explained in `docs/reference/skill-functions.md`."
+   - "When you want optional enforcement (credential leak detection, prompt-injection flagging, convention checks): `hooks/README.md` — but skip it until you've shipped a couple of skills first."
+   - "When you want to understand *why* Open Atlas works the way it does: `docs/reference/why-this-works.md`."
+   - "You do not need any of the above to get value from Open Atlas. The minimum-viable adoption path is just the workspace + one persona. Everything else is additive when you've felt the gap."
 
 ## Important concepts to explain (if the user is new)
 

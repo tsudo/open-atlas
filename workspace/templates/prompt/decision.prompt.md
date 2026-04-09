@@ -1,3 +1,7 @@
+---
+atlas_tier: framework
+---
+
 # Template: Decision Support
 
 Use when you need a recommendation between choices, prioritization, a go/no-go decision, or risk-based selection.

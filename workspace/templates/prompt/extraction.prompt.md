@@ -1,3 +1,7 @@
+---
+atlas_tier: framework
+---
+
 # Template: Extraction & Structuring
 
 Use when you need facts, entities, and decisions extracted from raw text, conversion of messy notes into structured knowledge objects, or insights harvested from conversations without inventing content.

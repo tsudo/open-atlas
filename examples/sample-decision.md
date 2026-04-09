@@ -1,12 +1,15 @@
 ---
+atlas_tier: framework
 title: "Decision: Use Markdown for All Workspace Documents"
 doc_type: decision
 status: reviewed
-created: 2024-03-10
-updated: 2024-03-10
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
 owner: alex
 tags: [tooling, workflow, foundational]
 ---
+
+> **Sample decision record showing a filled-in decision template.** This file demonstrates the decision-record format. For how the v1.1 production skills help you work through a decision *before* recording it, see [`workspace/skills/think-it-through.md`](../workspace/skills/think-it-through.md) — it composes the `options-and-tradeoffs` strategy with anti-sycophancy gates and produces a structured decision-thinking artifact you can capture into a record like this one.
 
 ## Context
 
@@ -32,7 +35,7 @@ Setting up a new AI workspace requires choosing a document format. The team uses
 
 **Decided by:** Alex
 
-**Date decided:** 2024-03-10
+**Date decided:** YYYY-MM-DD
 
 **Status:** reviewed
 
@@ -59,8 +62,8 @@ Markdown is the only format that works natively across all our tools — VS Code
 
 | Action | Owner | Due | Status |
 | --- | --- | --- | --- |
-| Create frontmatter schema | Alex | 2024-03-15 | [x] |
-| Set up document templates | Alex | 2024-03-20 | [ ] |
+| Create frontmatter schema | Alex | YYYY-MM-DD | [x] |
+| Set up document templates | Alex | YYYY-MM-DD | [ ] |
 
 ---
 

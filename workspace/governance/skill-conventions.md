@@ -41,10 +41,24 @@ owner: [your-name]
 tags: [skill]
 function: workflow      # gate | steward | workflow | utility — REQUIRED
 hotwords: [trigger]     # at least one trigger phrase — REQUIRED
+freedom_level: medium   # high | medium | low — RECOMMENDED (defaults inferred from function if omitted)
 ---
 ```
 
 Skills missing `function:` or `hotwords:` are incomplete and should not be invoked.
+### Freedom Level
+
+Declares how much latitude the AI has during execution. See `docs/reference/skill-functions.md` for the full reference.
+
+| Level | Meaning | Default for |
+|---|---|---|
+| `high` | Multiple valid approaches | `utility` |
+| `medium` | Preferred pattern, some variation | `workflow` |
+| `low` | Specific sequence required | `gate`, `steward` |
+
+**Size ceiling:** Keep skill files under 500 lines. Extract stable reference material into subfiles.
+
+**Forward-testing:** After writing a skill, ask "what happens if the AI applies the most permissive interpretation?" Tighten freedom level or add approval boundaries if the answer is bad outcomes.
 
 ## The Four Function Types
 
@@ -112,4 +126,4 @@ The maintenance cost of a skill is real. Every skill in `workspace/skills/` is o
 
 ---
 
-*Open Atlas v1.1. See `docs/reference/skill-functions.md` for the longer treatment of each function type, and `docs/reference/output-contracts.md` for the output contract concept that grounds the gate/steward discipline.*
+*Open Atlas v1.2. See `docs/reference/skill-functions.md` for the longer treatment of each function type, and `docs/reference/output-contracts.md` for the output contract concept that grounds the gate/steward discipline.*

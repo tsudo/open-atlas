@@ -15,9 +15,9 @@
 # though `workspace/personas/per_*.md` is in the user tier — this is intentional and
 # documented in the exceptions block at the bottom.
 
-version: 1.1
-generated: 2026-04-07
-atlas_version: "1.1"
+version: 1.2
+generated: 2026-04-13
+atlas_version: "1.2"
 
 tiers:
   core:
@@ -46,6 +46,10 @@ tiers:
       - workspace/skills/extract-knowledge.md
       - workspace/skills/review-context.md
       - workspace/skills/my-next-skill.md
+      - workspace/skills/retro.md
+      - workspace/skills/oa-skill-creator.md
+      - workspace/skills/oa-review.md
+      - workspace/skills/oa-update.md
       - workspace/context/human-operating-model.md
       - hooks/**
       - examples/**
@@ -76,6 +80,14 @@ exceptions:
     - workspace/skills/extract-knowledge.md  # Production skill — framework. Edit creates a user fork.
     - workspace/skills/review-context.md  # Production skill — framework. Edit creates a user fork.
     - workspace/skills/my-next-skill.md  # Starter scaffold — framework. Copying it (intended use) creates a user file.
+    - workspace/skills/retro.md  # Production skill — framework. Edit creates a user fork.
+    - workspace/skills/oa-skill-creator.md  # Production skill — framework. Edit creates a user fork.
+    - workspace/skills/oa-review.md  # Production skill — framework. Edit creates a user fork.
+    - workspace/skills/oa-update.md  # Production skill — framework. Edit creates a user fork.
+      - workspace/skills/retro.md
+      - workspace/skills/oa-skill-creator.md
+      - workspace/skills/oa-review.md
+      - workspace/skills/oa-update.md
 
 # Notes:
 # - The colleague's *filled-in* version of `workspace/context/human-operating-model.md`

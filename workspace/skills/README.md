@@ -22,17 +22,21 @@ For one-off work, just talk to the AI. Skills are for the workflows that recur.
 
 ## What ships in this directory
 
-Open Atlas v1.1 ships **four production skills and one starter** in `workspace/skills/`. They are not example files — they are the working skills your AI runs when you invoke them.
+Open Atlas v1.2 ships **eight production skills and one starter** in `workspace/skills/`. They are not example files — they are the working skills your AI runs when you invoke them.
 
 | File | What it's for | Function class |
 |---|---|---|
 | `capture.md` | "I have a thought / a paste / a chunk of context — where does it go?" | workflow |
 | `think-it-through.md` | "Help me think through this decision without telling me what I want to hear" | workflow |
 | `extract-knowledge.md` | "I learned something today — capture it before I lose it" | workflow |
-| `review-context.md` | "Is my workspace drifting? Run a health check." | steward |
+| `review-context.md` | "Is my workspace drifting? Run a quick health check." | steward |
+| `retro.md` | "What did we learn this session? Capture it before it's gone." | workflow |
+| `oa-skill-creator.md` | "I want to build a new skill — walk me through it." | workflow |
+| `oa-review.md` | "Full workspace audit — structural integrity, conventions, governance." | steward |
+| `oa-update.md` | "Is there a newer version of Open Atlas? What changed?" | utility |
 | `my-next-skill.md` | Starter scaffold — copy, rename, fill in to build your own skill | (template) |
 
-Together, the four production skills form a complete loop: capture in → think things through → extract what's durable → maintain the workspace. A new user who runs all four within their first week has used Open Atlas the way it's meant to be used.
+The first four skills form the core loop: capture in → think things through → extract what's durable → check for drift. The v1.2 skills extend this with session retrospectives (retro), guided skill creation (oa-skill-creator), full structural auditing (oa-review), and upstream update checking (oa-update).
 
 **Read the skills themselves.** They're written to be readable. Studying them is how you'll learn to write your own.
 
@@ -77,12 +81,14 @@ When you write your own skill, ask: *which of the five strategies fits the reaso
 
 Pick the one closest to what you want to build and read it top-to-bottom.
 
-- **Want to build a workflow skill?** Read `capture.md`. It's the simplest of the four. Pay attention to the procedure section and the output contract.
+- **Want to build a workflow skill?** Read `capture.md`. It's the simplest. Pay attention to the procedure section and the output contract.
 - **Want to build something that handles ambiguity gracefully?** Read `think-it-through.md`. It composes `options-and-tradeoffs` and shows how to load decision heuristics without requiring the user to have configured anything.
-- **Want to build a steward skill?** Read `review-context.md`. Pay attention to the cadence framing and the difference between "what to flag" and "what to decide."
+- **Want to build a steward skill?** Read `review-context.md` for a lighter example, or `oa-review.md` for a full seven-category audit. Pay attention to the cadence framing and the difference between "what to flag" and "what to decide."
 - **Want to write a skill that produces a durable artifact?** Read `extract-knowledge.md`. Pay attention to how it stays useful even when `workspace/knowledge/` is empty.
+- **Want to see approval boundaries and freedom level in action?** Read `retro.md`. It declares explicit stop points and uses adaptive mode selection.
+- **Want to see how a guided creation workflow works?** Read `oa-skill-creator.md`. It's the skill that builds skills.
 
-Then copy `my-next-skill.md`, rename it, fill in the sections, and you'll have a skill in your workspace.
+Then copy `my-next-skill.md`, rename it, fill in the sections, and you'll have a skill in your workspace. Or run `oa-skill-creator` and let it walk you through the process.
 
 ---
 
@@ -102,10 +108,11 @@ For wiring per AI tool, see [`docs/day-2/creating-skills.md`](../../docs/day-2/c
 
 ## When you're ready to build your own
 
-Two paths:
+Three paths:
 
-1. **Copy `my-next-skill.md`**, rename it, fill in the sections. Fastest path. Best when you already know what you want.
-2. **Run the starter kit interview** at [`training/kits/skill-starter/SETUP.md`](../../training/kits/skill-starter/SETUP.md). Structured. Best when you want guidance on which function class to pick and what each section should contain.
+1. **Run `oa-skill-creator`** — the guided creation skill walks you through naming, function classification, freedom level, hotwords, procedure, and registration. Best when you want structured guidance without leaving your AI session.
+2. **Copy `my-next-skill.md`**, rename it, fill in the sections. Fastest path. Best when you already know what you want.
+3. **Run the starter kit interview** at [`training/kits/skill-starter/SETUP.md`](../../training/kits/skill-starter/SETUP.md). Most structured. Best when you want to study the template in depth.
 
 Either way, your new skill should:
 
@@ -121,7 +128,7 @@ When you run into trouble, read [`docs/day-2/creating-skills.md`](../../docs/day
 
 ## What this directory is NOT
 
-- **Not a kitchen sink.** Open Atlas ships four production skills on purpose. They cover the lifecycle. Adding more skills here is your job, not Open Atlas's.
+- **Not a kitchen sink.** Open Atlas ships eight production skills on purpose. They cover the lifecycle plus maintenance. Adding domain-specific skills here is your job, not Open Atlas's.
 - **Not the only place skills can live.** A skill that's specific to one project belongs in that project's directory, not here. This directory is for skills that work across the whole workspace.
 - **Not a substitute for thinking.** A skill that runs the wrong procedure consistently is worse than no skill at all. The skills here are starting points; review the ones you use, edit them when they don't fit, retire them when they stop earning their keep.
 

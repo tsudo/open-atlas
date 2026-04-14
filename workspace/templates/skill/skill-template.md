@@ -9,6 +9,7 @@ owner: [your-name]
 tags: [skill]
 function: workflow  # one of: gate | steward | workflow | utility — REQUIRED, no default
 hotwords: []        # list of trigger phrases — REQUIRED, no default
+freedom_level: medium  # high | medium | low — see skill-conventions.md
 ---
 
 <!--
@@ -41,11 +42,34 @@ which discipline rules apply.
 
 If you can't decide, default to `workflow` and revise later. `gate` is for skills that
 must say PASS / BLOCK; if your skill doesn't produce a forced verdict, it's not a gate.
+
+== Freedom level (RECOMMENDED) ==
+
+Declares how much latitude the AI has during execution. Orthogonal to function
+(which measures consequence of failure).
+
+  high    — multiple valid approaches; heuristic guidance; principles over rigid steps
+  medium  — preferred pattern exists; some variation acceptable; the default
+  low     — fragile operations; specific sequence required; minimal deviation allowed
+
+Default when omitted: gate/steward → low, workflow → medium, utility → high.
+Explicit declaration overrides inference.
+
+== Approval boundaries (RECOMMENDED) ==
+
+Declare the points where the skill must pause for explicit user confirmation.
+Typical triggers: durable writes, external mutations, routing decisions, mode selection.
+If the skill is read-only with no side effects, omit this section.
+
+Forward-testing discipline: after writing the skill, mentally walk through "what happens
+if the AI interprets this instruction in the most permissive way possible?" If that
+produces bad outcomes, tighten the freedom level or add approval boundaries.
 -->
 
 # Skill: [Name]
 
 **Function:** [gate | steward | workflow | utility]
+**Freedom level:** [high | medium | low — see `workspace/governance/skill-conventions.md`]
 **Composes strategy:** [pick one from `workspace/templates/strategy/` if your skill does reasoning work, or omit for pure utilities]
 **Composes contract:** [base output contract](../output-contract/base.md)
 **Hotwords:** `[trigger phrase 1]`, `[trigger phrase 2]`
@@ -195,6 +219,16 @@ Events are appended to your workspace's learnings log. See `docs/reference/feedb
 
 ---
 
+## Approval Boundaries
+
+[Points where the skill must stop and wait for explicit user confirmation before continuing. Delete this section if the skill runs fully autonomously with no mutation side effects.]
+
+- [Boundary 1 — e.g., "Before writing any files to workspace/knowledge/"]
+- [Boundary 2 — e.g., "Before creating tasks in external systems"]
+- [Boundary 3 — e.g., "After presenting the routing plan but before executing it"]
+
+---
+
 ## Resources
 
 - `workspace/templates/strategy/` — five reasoning strategy templates skills can compose (`adversarial-critique`, `chain-of-thought`, `options-and-tradeoffs`, `self-refine`, `structured-extraction`)
@@ -207,4 +241,4 @@ Events are appended to your workspace's learnings log. See `docs/reference/feedb
 
 ---
 
-*Created from `workspace/templates/skill/skill-template.md` (Open Atlas v1.1).*
+*Created from `workspace/templates/skill/skill-template.md` (Open Atlas v1.2).*

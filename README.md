@@ -8,7 +8,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-CC--BY--4.0-lightgrey.svg" alt="License: CC-BY-4.0">
-  <img src="https://img.shields.io/badge/Version-v1.1-blue.svg" alt="Version: v1.1">
+  <img src="https://img.shields.io/badge/Version-v1.2-blue.svg" alt="Version: v1.2">
   <img src="https://img.shields.io/badge/AI-Workspace%20Framework-purple.svg" alt="AI Workspace">
 </p>
 
@@ -85,7 +85,7 @@ Different starting points need different first moves.
 
 - **Gives the AI a predictable workspace** — `workspace/` with conventions for personas, skills, knowledge, drafts, templates
 - **Ships named personas** the AI can adopt — `per_open-atlas` (default), plus three example personas in `training/kits/persona-starter/examples/` (`per_advisor`, `per_reviewer`, `per_librarian`)
-- **Ships four production skills + a starter** in `workspace/skills/` — `capture` (capture a thought), `think-it-through` (decision help with anti-sycophancy gates), `extract-knowledge` (turn an insight into a durable artifact), `review-context` (workspace audit), and `my-next-skill` (starter scaffold for building your own). Each skill composes a reasoning strategy and the base output contract.
+- **Ships eight production skills + a starter** in `workspace/skills/` — `capture` (capture a thought), `think-it-through` (decision help with anti-sycophancy gates), `extract-knowledge` (turn an insight into a durable artifact), `review-context` (quick workspace audit), `retro` (session retrospective), `oa-skill-creator` (guided skill creation), `oa-review` (full structural audit), `oa-update` (upstream update checker), and `my-next-skill` (starter scaffold). Each skill composes a reasoning strategy and the base output contract.
 - **Ships hook designs as explainers** — credential-leak detection, prompt-injection flagging, convention checks. Working scripts and a test harness ship in v1.2; the v1.1 explainers are the design contract you can implement in your own scripting language now if you want.
 - **Includes hardened templates** for personas and skills with required sections (especially "what this does NOT do") so what you build is consistent
 - **Ships every example with the kit that built it** — the `training/` directory has the same starter kits, prompts, and walkthroughs you'd use to build your own personas and skills
@@ -123,7 +123,7 @@ open-atlas/
 │   ├── governance/                 ← Conventions (skill conventions, taxonomy)
 │   ├── templates/                  ← Persona, skill, doc, schema templates
 │   ├── personas/                   ← per_open-atlas (your default persona)
-│   ├── skills/                     ← 4 production skills + my-next-skill starter
+│   ├── skills/                     ← 8 production skills + my-next-skill starter
 │   ├── knowledge/                  ← Durable reference material
 │   ├── drafts/                     ← Work in progress
 │   └── archive/                    ← Completed work
@@ -164,7 +164,7 @@ open-atlas/
 - **[docs/README.md](docs/README.md)** — full documentation index
 - **[docs/day-1/](docs/day-1/)** — first session, core concepts
 - **[docs/day-2/](docs/day-2/)** — creating personas, creating skills, using hooks, workspace maintenance
-- **[docs/reference/](docs/reference/)** — anti-patterns, feedback loop, skill functions, output contracts, manifest, compatibility, why-this-works
+- **[docs/reference/](docs/reference/)** — anti-patterns, feedback loop, skill functions, output contracts, reliability tiers, manifest, compatibility, why-this-works
 
 ---
 

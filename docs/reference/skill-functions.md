@@ -157,6 +157,42 @@ The fix in every case: re-classify, restructure, ship the rewrite. Skill files a
 
 ---
 
+## Freedom level
+
+Every skill operates at one of three freedom levels. Freedom level is orthogonal to function class — a gate can be high-freedom (heuristic checks) or low-freedom (exact checklist), and a workflow can be low-freedom (fragile deployment sequence) or high-freedom (creative brainstorming).
+
+| Level | What it means | Body style |
+|---|---|---|
+| **`high`** | Multiple valid approaches. The AI uses judgment. | Heuristic guidance, principles, flexible procedure |
+| **`medium`** | A preferred pattern exists, but variation is acceptable. | Parameterized procedure with noted decision points |
+| **`low`** | Fragile operations. Specific sequence required. | Rigid step-by-step checklist, minimal deviation |
+
+**Default when not declared:** `gate`/`steward` → `low`, `workflow` → `medium`, `utility` → `high`. Explicit `freedom_level:` in frontmatter overrides the default.
+
+**Size ceiling:** Keep skill files under 500 lines. If a skill exceeds this, extract stable reference material into separate files and reference them from the procedure. This keeps the AI's working context focused on the steps it needs to follow rather than background material it already absorbed.
+
+**Forward-testing:** After writing a skill, ask: "what happens if the AI interprets this instruction in the most permissive way possible?" If that produces bad outcomes, tighten the freedom level or add approval boundaries.
+
+---
+
+## Approval boundaries
+
+An approval boundary is a point in a skill's execution where the AI must stop and wait for explicit user confirmation before continuing. Declaring boundaries upfront prevents the AI from making runtime judgment calls about when to pause.
+
+Typical boundary triggers:
+
+- **Durable writes** — creating or modifying files in governance, knowledge, or production surfaces
+- **External mutations** — creating tasks in external systems, posting to APIs, sending messages
+- **Routing decisions** — choosing where output goes (which directory, which system, which format)
+- **Mode selection** — the skill offers multiple modes and the user should confirm before the skill proceeds
+- **Destructive actions** — deleting, archiving, or overwriting existing content
+
+A skill with no side effects (read-only, analysis-only) typically has no approval boundaries. A skill that writes to durable storage should have at least one: the point where analysis ends and mutation begins.
+
+Approval boundaries are declared in the skill file, not decided at runtime. This makes the contract legible to the user before they invoke the skill.
+
+---
+
 ## Where to go next
 
 - **The output contract discipline that gates enforce** → [output-contracts.md](output-contracts.md)

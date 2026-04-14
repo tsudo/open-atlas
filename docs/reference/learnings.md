@@ -86,9 +86,46 @@ Both persist across sessions. Both prevent re-work. But they serve different pur
 
 ## Why Learnings Replaced Session Logs
 
-Earlier patterns tried to capture cross-session knowledge through full session logs (every interaction recorded for later review). This approach has a failure mode: the discipline of writing comprehensive session logs is too high to maintain, so the logs either become noise or stop happening entirely. Learnings fix this by inverting the contract — instead of logging everything in case it matters, you log only what surprised you. The signal density is dramatically higher, and the discipline is sustainable.
+Earlier patterns tried to capture cross-session knowledge through full session logs (every interaction recorded for later review). This approach has a failure mode: the discipline of writing exhaustive session logs is too high to maintain, so the logs either become noise or stop happening entirely. Learnings fix this by inverting the contract — instead of logging everything in case it matters, you log only what surprised you. The signal density is dramatically higher, and the discipline is sustainable.
 
 Your AI tool's session transcripts already capture the full conversation. You don't need to duplicate that. What you need is the *delta* — the things that aren't in the documentation, that aren't obvious from the code, that future-you will wish you had written down.
+
+## Structured Schema
+
+The examples above already include most of the fields that matter. When your learnings file grows past ~30 entries, naming those fields explicitly makes search and periodic review practical.
+
+**Canonical minimum fields:**
+
+| Field | Purpose | Already in examples as |
+|---|---|---|
+| `learning_id` | Permanent identifier | `L-0001` heading prefix |
+| `timestamp` | When the learning was captured | Date in the heading |
+| `type` | High-level class | `tool`, `code`, `process`, `platform`, `decision` |
+| `key` | Short stable slug for search | The slug after the dash (`py-not-python`) |
+| `insight` | The learning itself in compact language | The body paragraph |
+| `confidence` | How validated (1-10) | The `Confidence:` field |
+| `files` | Affected files or surfaces | The `Files:` field |
+| `tags` | Retrieval terms | The `Tags:` field |
+
+You don't need to restructure your file to match this table. The point is knowing which fields matter so you don't accidentally leave them out. A learning without `files` or `tags` is hard to find later. A learning without `confidence` can't be prioritized during review.
+
+If you eventually move to JSONL, these become your record keys.
+
+## Record Hygiene
+
+Three rules keep a learnings file useful over time:
+
+**Type separation.** Learnings should contain validated patterns, pitfalls, and discoveries — not raw events, session notes, or unprocessed observations. If something isn't validated yet, capture it with low confidence (2-3/10) rather than mixing event logs into the learnings file. A learnings file that doubles as a journal loses its retrieval value.
+
+**Correction, not deletion.** When a learning turns out to be wrong, don't delete the old entry. Add a new entry that supersedes it, and mark the old one: `**Superseded by L-XXXX**`. This preserves the audit trail — future-you may want to know what you used to believe and when you corrected it. If the old learning was just wrong (not outdated), add a sentence to the new entry explaining what changed.
+
+**Periodic review.** Every 10-20 entries (or monthly, whichever comes first), scan your learnings file for:
+
+- Stale entries — the tool changed, the constraint no longer applies
+- Low-confidence entries that can now be validated (raise confidence) or retired
+- Clusters of related entries that should be consolidated into a single learning
+
+A learnings file that only grows and never prunes becomes the same noise it was designed to replace.
 
 ---
 
